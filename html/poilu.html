@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Mémoire en Meuse" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --radius-sm: calc(var(--radius) - 4px);
+      --radius-md: calc(var(--radius) - 2px);
+      --radius-lg: var(--radius);
+      --radius-xl: calc(var(--radius) + 4px);
+      --radius-2xl: calc(var(--radius) + 8px);
+      --radius-3xl: calc(var(--radius) + 12px);
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-muted: var(--muted);
+      --color-border: var(--border);
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      --ease-glass: cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    :root {
+      --radius: 1rem;
+      --background: oklch(0.977 0.012 85);
+      --foreground: oklch(0.21 0.022 253);
+      --card: oklch(0.985 0.008 85);
+      --primary: oklch(0.52 0.16 30);
+      --primary-foreground: oklch(0.977 0.012 85);
+      --muted: oklch(0.53 0.02 253);
+      --border: oklch(0.21 0.022 253 / 0.1);
+      --panel: oklch(0.99 0.004 85 / 0.55);
+    }
+    .glass {
+      background: var(--panel);
+      backdrop-filter: blur(18px) saturate(1.1);
+      border: 1px solid oklch(0.99 0.004 85 / 0.7);
+      box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.8), 0 24px 48px -24px oklch(0.21 0.022 253 / 0.18);
+    }
+    .glass-soft {
+      background: oklch(0.99 0.004 85 / 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid oklch(0.99 0.004 85 / 0.6);
+    }
+    .bg-frost {
+      background:
+        radial-gradient(60% 55% at 18% 12%, oklch(0.52 0.16 30 / 0.1), transparent 60%),
+        radial-gradient(50% 50% at 85% 20%, oklch(0.72 0.05 240 / 0.18), transparent 60%),
+        radial-gradient(70% 60% at 50% 100%, oklch(0.94 0.02 85 / 0.6), transparent 70%),
+        var(--background);
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @utility animate-rise { animation: rise 0.9s var(--ease-glass) both; }
+    @layer base {
+      * { border-color: var(--color-border); }
+      html { scroll-behavior: smooth; }
+      body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-body); }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <title>Poilu — Mémoire en Meuse</title>
+  <meta name="description" content="Découvrez la biographie d'un soldat tombé en Meuse pendant la Première Guerre mondiale." />
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+</head>
+<body>
+<div class="min-h-screen bg-frost font-body text-foreground antialiased">
+  <header class="sticky top-0 z-40 px-4 pt-4">
+    <nav class="glass mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-5 py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="grid size-8 place-items-center rounded-full bg-primary/90">
+          <span class="font-mono text-[10px] tracking-widest text-primary-foreground">M</span>
+        </div>
+        <div class="leading-tight">
+          <p class="font-display text-lg font-semibold italic tracking-tight">Mémoire en Meuse</p>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">Annuaire des poilus</p>
+        </div>
+      </a>
+      <a href="poilus.html" class="hidden rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90 md:inline-block">Retour à l'annuaire</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+</div>
+
+<script>
+$(function () {
+  function el(tag, cls, text) {
+    var $e = $("<" + tag + ">").addClass(cls || "");
+    if (text !== undefined) $e.text(text);
+    return $e;
+  }
+
+  var id = new URLSearchParams(location.search).get("id");
+  var p = MEM.getById(id);
+  var $app = $("#app");
+
+  if (!p) {
+    document.title = "Poilu non trouvé — Mémoire en Meuse";
+    $app.append(
+      el("div", "flex min-h-[70vh] items-center justify-center px-4").append(
+        el("div", "max-w-md text-center").append(
+          el("h1", "font-display text-7xl font-bold text-foreground", "404"),
+          el("h2", "font-display mt-4 text-2xl font-semibold text-foreground", "Poilu non trouvé"),
+          el("p", "mt-2 text-sm text-muted", "Ce poilu n'existe pas dans l'annuaire."),
+          el("div", "mt-6").append(
+            el("a", "inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90", "Retour à l'annuaire").attr("href", "poilus.html")
+          )
+        )
+      )
+    );
+    return;
+  }
+
+  document.title = p.nom + " — Mémoire en Meuse";
+  $('meta[name="description"]').attr("content", p.resume);
+
+  var $breadcrumb = el("section", "mx-auto max-w-6xl px-4 pt-12").append(
+    el("p", "font-mono text-[11px] uppercase tracking-[0.25em] text-muted").append(
+      el("a", "text-primary hover:text-primary/80", "Annuaire").attr("href", "poilus.html"),
+      document.createTextNode(" › " + p.nom)
+    )
+  );
+
+  var $photo = el("div", "animate-rise md:order-2").append(
+    el("div", "aspect-square overflow-hidden rounded-3xl bg-muted").append(
+      MEM.photoOrAvatar(p, "h-full w-full object-cover grayscale sepia-[.25]", "text-4xl font-semibold")
+    ),
+    el("p", "mt-3 text-xs text-muted", "Portrait de " + p.nom)
+  );
+
+  var $tags = el("div", "mt-6 flex flex-wrap gap-2");
+  $.each(p.tags, function (_, t) {
+    $tags.append(el("span", "rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary", t));
+  });
+
+  var $intro = el("div", "animate-rise md:order-1 [animation-delay:120ms]").append(
+    el("h1", "font-display text-5xl leading-tight font-semibold tracking-tight", p.nom),
+    el("p", "mt-6 text-lg text-foreground/80 text-pretty max-w-[50ch]", p.resume),
+    $tags
+  );
+
+  var $hero = el("section", "mx-auto max-w-6xl px-4 py-12").append(
+    el("div", "grid gap-8 md:grid-cols-2 md:items-start").append($photo, $intro)
+  );
+
+  var facts = [
+    ["Naissance", String(p.naissance)],
+    ["Décès", p.deces.split("-")[0] + " · " + p.lieu],
+    ["Département", p.departement_deces],
+    ["Unité", p.regiment]
+  ];
+  var $facts = el("div", "glass grid grid-cols-1 gap-4 rounded-2xl p-6 sm:grid-cols-2 lg:grid-cols-4");
+  $.each(facts, function (_, f) {
+    $facts.append(el("div").append(
+      el("p", "text-xs font-medium uppercase tracking-wide text-muted", f[0]),
+      el("p", "mt-2 font-mono text-lg font-semibold", f[1])
+    ));
+  });
+
+  var $article = el("article", "space-y-8");
+  $.each(p.sections, function (_, s) {
+    $article.append(el("div").append(
+      el("h2", "font-display text-2xl font-semibold tracking-tight", s[0]),
+      el("p", "mt-4 text-lg leading-relaxed text-foreground/85", s[1])
+    ));
+  });
+  if (p.glossaire && p.glossaire.length) {
+    var $items = el("div", "mt-6 space-y-4");
+    $.each(p.glossaire, function (_, g) {
+      $items.append(el("div").append(
+        el("p", "font-semibold text-foreground", g[0]),
+        el("p", "mt-1 text-sm text-foreground/75", g[1])
+      ));
+    });
+    $article.append(el("div", "mt-12 border-t border-border pt-12").append(
+      el("h2", "font-display text-2xl font-semibold tracking-tight", "Glossaire"),
+      $items
+    ));
+  }
+
+  var others = MEM.poilus.filter(function (o) { return o.id !== p.id; }).slice(0, 3);
+  var $more = el("div", "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8");
+  $.each(others, function (_, o) { $more.append(MEM.card(o, true)); });
+
+  $app.append(
+    $breadcrumb,
+    $hero,
+    el("section", "mx-auto max-w-6xl px-4 py-8").append($facts),
+    el("section", "mx-auto max-w-3xl px-4 py-12").append($article),
+    el("section", "mx-auto max-w-6xl px-4 py-16").append(
+      el("div", "border-t border-border pt-12").append(
+        el("h2", "font-display text-3xl font-semibold tracking-tight mb-8", "Découvrir d'autres biographies"),
+        $more,
+        el("a", "inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium", "← Rechercher toutes les biographies").attr("href", "poilus.html")
+      )
+    )
+  );
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mémoire en Meuse — Voyages-hommage pour les familles</title>
+  <meta name="description" content="Nous accompagnons les familles des soldats tombés en Meuse (1914–1918) sur les traces de leurs proches. Voyages-hommage, transmission et mémoire, avec les enfants." />
+  <meta name="author" content="Mémoire en Meuse" />
+  <meta property="og:title" content="Mémoire en Meuse — Voyages-hommage pour les familles" />
+  <meta property="og:description" content="Voyages-hommage en Meuse pour les familles des soldats tombés en 1914–1918. Marcher là où ils ont vécu, ensemble." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme inline {
+      --radius-sm: calc(var(--radius) - 4px);
+      --radius-md: calc(var(--radius) - 2px);
+      --radius-lg: var(--radius);
+      --radius-xl: calc(var(--radius) + 4px);
+      --radius-2xl: calc(var(--radius) + 8px);
+      --radius-3xl: calc(var(--radius) + 12px);
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-muted: var(--muted);
+      --color-border: var(--border);
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      --ease-glass: cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    :root {
+      --radius: 1rem;
+      --background: oklch(0.977 0.012 85);
+      --foreground: oklch(0.21 0.022 253);
+      --card: oklch(0.985 0.008 85);
+      --primary: oklch(0.52 0.16 30);
+      --primary-foreground: oklch(0.977 0.012 85);
+      --muted: oklch(0.53 0.02 253);
+      --border: oklch(0.21 0.022 253 / 0.1);
+      --panel: oklch(0.99 0.004 85 / 0.55);
+    }
+    .glass {
+      background: var(--panel);
+      backdrop-filter: blur(18px) saturate(1.1);
+      border: 1px solid oklch(0.99 0.004 85 / 0.7);
+      box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.8), 0 24px 48px -24px oklch(0.21 0.022 253 / 0.18);
+    }
+    .glass-soft {
+      background: oklch(0.99 0.004 85 / 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid oklch(0.99 0.004 85 / 0.6);
+    }
+    .bg-frost {
+      background:
+        radial-gradient(60% 55% at 18% 12%, oklch(0.52 0.16 30 / 0.1), transparent 60%),
+        radial-gradient(50% 50% at 85% 20%, oklch(0.72 0.05 240 / 0.18), transparent 60%),
+        radial-gradient(70% 60% at 50% 100%, oklch(0.94 0.02 85 / 0.6), transparent 70%),
+        var(--background);
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @utility animate-rise { animation: rise 0.9s var(--ease-glass) both; }
+    @layer base {
+      * { border-color: var(--color-border); }
+      html { scroll-behavior: smooth; }
+      body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-body); }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div class="min-h-screen bg-frost font-body text-foreground antialiased">
+  <header class="sticky top-0 z-40 px-4 pt-4">
+    <nav class="glass mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-5 py-3">
+      <a href="#" class="flex items-center gap-3">
+        <div class="grid size-8 place-items-center rounded-full bg-primary/90">
+          <span class="font-mono text-[10px] tracking-widest text-primary-foreground">M</span>
+        </div>
+        <div class="leading-tight">
+          <p class="font-display text-lg font-semibold italic tracking-tight">Mémoire en Meuse</p>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">Association · est. 2011</p>
+        </div>
+      </a>
+      <div class="hidden items-center gap-7 text-sm md:flex" id="nav-links"></div>
+      <a href="#participer" class="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90">Participer</a>
+    </nav>
+  </header>
+
+  <section class="mx-auto max-w-6xl px-4 pt-16 pb-10">
+    <div class="grid items-end gap-6 md:grid-cols-12">
+      <div class="animate-rise md:col-span-7">
+        <p class="font-mono mb-6 text-[11px] uppercase tracking-[0.25em] text-primary">Voyages-hommage · Meuse · 1914–1918</p>
+        <h1 class="font-display text-balance text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] font-semibold tracking-tight">
+          Marcher là où<br /><em class="font-medium text-primary italic">ils ont vécu</em>,<br />ensemble.
+        </h1>
+        <p class="mt-8 max-w-[46ch] text-lg leading-relaxed text-foreground/80 text-pretty">
+          Nous accompagnons les familles des soldats tombés en Meuse sur les traces de leurs proches — avec les enfants, avec les petits-enfants, avec ceux qui n'ont jamais eu le droit de connaître.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#participer" class="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">Rejoindre un voyage</a>
+          <a href="#voyages" class="glass-soft rounded-full px-6 py-3 text-sm font-medium transition-colors hover:bg-white/70">Découvrir les itinéraires</a>
+        </div>
+      </div>
+      <div class="animate-rise [animation-delay:120ms] md:col-span-5">
+        <div class="glass rounded-3xl p-5">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">Prochain départ</span>
+            <span class="font-mono text-[10px] text-primary">6 jours</span>
+          </div>
+          <p class="font-display text-3xl leading-tight font-semibold italic">Verdun &amp; Douaumont</p>
+          <p class="mt-2 text-sm text-muted">12 – 17 avril 2026 · 14 places</p>
+          <div class="h-px bg-border"></div>
+          <div class="mt-5 space-y-3">
+            <div class="flex items-center justify-between text-sm"><span class="text-muted">Familles inscrites</span><span class="font-mono">38</span></div>
+            <div class="flex items-center justify-between text-sm"><span class="text-muted">Enfants accompagnés</span><span class="font-mono">52</span></div>
+            <div class="flex items-center justify-between text-sm"><span class="text-muted">Cimetières visités</span><span class="font-mono">27</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="animate-rise mt-12 [animation-delay:240ms]">
+      <img src="assets/hero-meuse.jpg" alt="Cimetière militaire de la Première Guerre mondiale en Meuse à l'aube, un coquelicot rouge posé sur la pierre" class="aspect-[16/8] w-full rounded-3xl object-cover" />
+    </div>
+  </section>
+
+  <section id="voyages" class="mx-auto max-w-6xl px-4 py-20">
+    <div class="grid gap-8 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">(a) Itinéraires</p>
+        <h2 class="font-display mt-4 text-5xl leading-[1.02] font-semibold tracking-tight text-balance">Trois routes<br />à travers<br />la Meuse.</h2>
+        <p class="mt-6 max-w-[38ch] text-base text-pretty text-foreground/75">Chaque voyage est pensé comme une traversée : un lieu, une histoire, une famille. Les enfants y trouvent leur place, sans jamais trahir la gravité du lieu.</p>
+      </div>
+      <div class="space-y-4 md:col-span-8" id="itineraries"></div>
+    </div>
+  </section>
+
+  <section id="familles" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="glass grid gap-10 rounded-3xl p-8 md:grid-cols-12 md:p-12">
+      <div class="md:col-span-5">
+        <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">(b) Pour les familles</p>
+        <h2 class="font-display mt-4 text-4xl leading-[1.05] font-semibold tracking-tight text-balance md:text-5xl">Un lieu pour les enfants, un lieu pour les grands-parents.</h2>
+        <p class="mt-6 max-w-[42ch] text-base text-pretty text-foreground/75">Chaque voyage inclut un temps de découverte pensé pour les plus jeunes : carnet de route, atelier d'écriture sur les noms, et un coquelicot en laiton à emporter.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:col-span-7" id="rituals"></div>
+    </div>
+  </section>
+
+  <section id="temoignages" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-10 flex items-end justify-between">
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">(c) Témoignages</p>
+        <h2 class="font-display mt-4 text-5xl leading-[1.02] font-semibold tracking-tight text-balance">Ce que disent<br />les familles.</h2>
+      </div>
+      <p class="font-mono hidden text-[10px] uppercase tracking-[0.2em] text-muted md:block">Extrait · 2024</p>
+    </div>
+    <div class="grid gap-5 md:grid-cols-3" id="testimonials"></div>
+  </section>
+
+  <section id="participer" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="glass grid items-center gap-10 rounded-3xl p-10 md:grid-cols-12 md:p-16">
+      <div class="md:col-span-7">
+        <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">(d) Participer</p>
+        <h2 class="font-display mt-4 text-5xl leading-[1.02] font-semibold tracking-tight text-balance md:text-6xl">Rejoignez<br />le prochain voyage.</h2>
+        <p class="mt-6 max-w-[46ch] text-base text-pretty text-foreground/75">Chaque année, nous ouvrons 14 places par itinéraire. Les familles sont prioritaires. Les enfants sont attendus. Les dons permettent de financer les places des familles les plus modestes.</p>
+      </div>
+      <div class="space-y-3 md:col-span-5">
+        <a href="#" class="block w-full rounded-full bg-primary px-6 py-4 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">S'inscrire à un voyage</a>
+        <a href="#" class="glass-soft block w-full rounded-full px-6 py-4 text-center text-sm font-medium transition-colors hover:bg-white/70">Faire un don</a>
+        <a href="#" class="block w-full rounded-full px-6 py-3 text-center text-sm text-foreground/70 transition-colors hover:text-foreground">Devenir bénévole</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="presse" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-8 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">(e) Presse</p>
+        <h2 class="font-display mt-4 text-4xl leading-[1.05] font-semibold tracking-tight text-balance">Ils en ont parlé.</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:col-span-8 md:grid-cols-4" id="press"></div>
+    </div>
+  </section>
+
+  <footer class="mx-auto max-w-6xl px-4 py-16">
+    <div class="glass grid gap-8 rounded-3xl p-8 md:grid-cols-12 md:p-10">
+      <div class="md:col-span-5">
+        <p class="font-display text-2xl font-semibold italic">Mémoire en Meuse</p>
+        <p class="mt-3 max-w-[36ch] text-sm text-pretty text-muted">Association loi 1901 · 12 rue des Tilleuls, 55000 Verdun · contact@memoireenmeuse.fr</p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">Navigation</p>
+        <ul class="mt-4 space-y-2 text-sm" id="footer-links"></ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">Contact</p>
+        <p class="mt-4 text-sm text-foreground/80">contact@memoireenmeuse.fr</p>
+        <p class="mt-1 text-sm text-foreground/80">+33 3 29 00 00 00</p>
+        <p class="font-mono mt-4 text-[10px] text-muted">© 2026 · Mémoire en Meuse</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+$(function () {
+  var navLinks = [
+    { href: "#voyages", label: "Voyages" },
+    { href: "#familles", label: "Familles" },
+    { href: "#temoignages", label: "Témoignages" },
+    { href: "#presse", label: "Presse" },
+    { href: "poilus.html", label: "Annuaire" }
+  ];
+  var itineraries = [
+    { number: "01", duration: "4 jours", name: "Verdun", month: "Avril", spots: "14 places",
+      description: "Du fort de Douaumont à l'ossuaire, en passant par le cimetière national. Une journée entière consacrée à la lecture des noms, avec un historien au côté des familles." },
+    { number: "02", duration: "6 jours", name: "Douaumont", month: "Mai", spots: "12 places",
+      description: "Les tranchées de Vaux, le bois de Belleau, le cimetière français de Douaumont. Une nuit en hôtel de village, autour d'un repas partagé avec les habitants." },
+    { number: "03", duration: "5 jours", name: "Les tranchées", month: "Juin", spots: "10 places",
+      description: "Un itinéraire plus intime, à pied, sur les restes des positions de 1916. Pensé pour les familles avec enfants à partir de 10 ans, avec un temps de jeu et de dessin prévu chaque jour." }
+  ];
+  var rituals = [
+    { label: "Atelier", title: "Carnet de route", description: "Chaque enfant tient un carnet, dessine, colle, écrit. Il le garde au retour." },
+    { label: "Rituel", title: "Le coquelicot en laiton", description: "Un coquelicot en métal, frappé à la main, posé sur la tombe du soldat." },
+    { label: "Temps", title: "Le silence", description: "Un moment de silence, chaque soir, avant le dîner. Les enfants y participent." },
+    { label: "Mémoire", title: "L'arbre des noms", description: "Un arbre commun, dans chaque hôtel, où chaque famille pose le nom du sien." }
+  ];
+  var testimonials = [
+    { quote: "Mon fils de 9 ans a posé le coquelicot sur la tombe de son arrière-grand-père. Il n'a rien dit, mais il a pleuré. C'était ce qu'il fallait.", name: "Claire D.", detail: "Reims · voyage 2024" },
+    { quote: "J'avais 12 ans quand mon père est mort. J'avais 78 ans quand j'ai enfin pu aller le voir. Ce voyage m'a rendu quelque chose.", name: "Jean-Marc P.", detail: "Lyon · voyage 2023" },
+    { quote: "On a retrouvé le nom de mon grand-père sur une plaque. Ma fille l'a lu à voix haute. Tout le monde était là.", name: "Sophie L.", detail: "Nantes · voyage 2024" }
+  ];
+  var press = [
+    { outlet: "Le Figaro", excerpt: "« Un voyage qui répare quelque chose. »" },
+    { outlet: "France 2", excerpt: "Reportage · 13 novembre 2024" },
+    { outlet: "Le Monde", excerpt: "« La mémoire, transmise. »" },
+    { outlet: "RFI", excerpt: "« Des familles, des enfants, un lieu. »" }
+  ];
+
+  function el(tag, cls, text) {
+    var $e = $("<" + tag + ">").addClass(cls || "");
+    if (text !== undefined) $e.text(text);
+    return $e;
+  }
+
+  $.each(navLinks, function (_, l) {
+    $("#nav-links").append(el("a", "text-foreground/80 transition-colors hover:text-foreground", l.label).attr("href", l.href));
+    $("#footer-links").append($("<li>").append(el("a", "transition-colors hover:text-primary", l.label).attr("href", l.href)));
+  });
+
+  $.each(itineraries, function (_, i) {
+    var $left = el("div", "shrink-0 md:w-32").append(
+      el("p", "font-mono text-[10px] uppercase tracking-[0.2em] text-muted", i.number + " · " + i.duration),
+      el("p", "font-display mt-1 text-2xl font-semibold italic", i.name)
+    );
+    var $mid = el("div", "flex-1").append(el("p", "text-sm text-pretty text-foreground/85", i.description));
+    var $right = el("div", "shrink-0 text-right md:w-28").append(
+      el("p", "font-mono text-[10px] text-muted", i.month),
+      el("p", "font-mono mt-1 text-[10px] text-primary", i.spots)
+    );
+    $("#itineraries").append(el("div", "glass hover:bg-white/70 flex flex-col gap-6 rounded-2xl p-6 transition-colors md:flex-row md:items-center").append($left, $mid, $right));
+  });
+
+  $.each(rituals, function (_, r) {
+    $("#rituals").append(el("div", "glass-soft rounded-2xl p-5").append(
+      el("p", "font-mono text-[10px] uppercase tracking-[0.2em] text-muted", r.label),
+      el("p", "font-display mt-3 text-xl font-semibold italic", r.title),
+      el("p", "mt-2 text-sm text-pretty text-foreground/75", r.description)
+    ));
+  });
+
+  $.each(testimonials, function (_, t) {
+    $("#testimonials").append(el("figure", "glass flex flex-col rounded-2xl p-6").append(
+      el("blockquote", "font-display text-2xl leading-snug font-medium text-pretty italic", "«\u00a0" + t.quote + "\u00a0»"),
+      el("figcaption", "mt-6 border-t border-border pt-4").append(
+        el("p", "text-sm font-medium", t.name),
+        el("p", "font-mono mt-1 text-[10px] uppercase tracking-[0.15em] text-muted", t.detail)
+      )
+    ));
+  });
+
+  $.each(press, function (_, p) {
+    $("#press").append(el("div", "glass-soft rounded-xl p-5").append(
+      el("p", "font-display text-2xl font-semibold italic", p.outlet),
+      el("p", "mt-2 text-xs text-pretty text-muted", p.excerpt)
+    ));
+  });
+});
+</script>
+</body>
+</html>
