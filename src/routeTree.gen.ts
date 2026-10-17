@@ -10,12 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiIndexRouteImport } from './routes/api/index'
+import { Route as ApiTableRouteImport } from './routes/api/$table'
 import { Route as PoilusIndexRouteImport } from './routes/poilus/index'
 import { Route as PoilusIdRouteImport } from './routes/poilus/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiIndexRoute = ApiIndexRouteImport.update({
+  id: '/api/',
+  path: '/api/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiTableRoute = ApiTableRouteImport.update({
+  id: '/api/$table',
+  path: '/api/$table',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoilusIndexRoute = PoilusIndexRouteImport.update({
@@ -31,31 +43,39 @@ const PoilusIdRoute = PoilusIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api/$table': typeof ApiTableRoute
   '/poilus/$id': typeof PoilusIdRoute
+  '/api/': typeof ApiIndexRoute
   '/poilus/': typeof PoilusIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api/$table': typeof ApiTableRoute
   '/poilus/$id': typeof PoilusIdRoute
+  '/api': typeof ApiIndexRoute
   '/poilus': typeof PoilusIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api/$table': typeof ApiTableRoute
   '/poilus/$id': typeof PoilusIdRoute
+  '/api/': typeof ApiIndexRoute
   '/poilus/': typeof PoilusIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/poilus/$id' | '/poilus/'
+  fullPaths: '/' | '/api/$table' | '/poilus/$id' | '/api/' | '/poilus/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/poilus/$id' | '/poilus'
-  id: '__root__' | '/' | '/poilus/$id' | '/poilus/'
+  to: '/' | '/api/$table' | '/poilus/$id' | '/api' | '/poilus'
+  id: '__root__' | '/' | '/api/$table' | '/poilus/$id' | '/api/' | '/poilus/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiTableRoute: typeof ApiTableRoute
   PoilusIdRoute: typeof PoilusIdRoute
+  ApiIndexRoute: typeof ApiIndexRoute
   PoilusIndexRoute: typeof PoilusIndexRoute
 }
 
@@ -66,6 +86,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/': {
+      id: '/api/'
+      path: '/api'
+      fullPath: '/api/'
+      preLoaderRoute: typeof ApiIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/$table': {
+      id: '/api/$table'
+      path: '/api/$table'
+      fullPath: '/api/$table'
+      preLoaderRoute: typeof ApiTableRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/poilus/': {
@@ -87,7 +121,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiTableRoute: ApiTableRoute,
   PoilusIdRoute: PoilusIdRoute,
+  ApiIndexRoute: ApiIndexRoute,
   PoilusIndexRoute: PoilusIndexRoute,
 }
 export const routeTree = rootRouteImport
