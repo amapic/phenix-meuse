@@ -1,23 +1,18 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { getPoiluById, poilus } from "../../lib/poilus";
+import { useEffect, useState } from "react";
+import { fetchPoilus, fetchPoiluById, type Poilu } from "../../lib/poilus";
 
 export const Route = createFileRoute("/poilus/$id")({
-  head: ({ params }) => {
-    const poilu = getPoiluById(params.id);
-    return {
-      meta: [
-        {
-          title: `${poilu?.nom || "Poilu"} — Mémoire en Meuse`,
-        },
-        {
-          name: "description",
-          content:
-            poilu?.resume ||
-            "Découvrez la biographie d'un soldat tombé en Meuse pendant la Première Guerre mondiale.",
-        },
-      ],
-    };
-  },
+  head: () => ({
+    meta: [
+      { title: "Poilu — Mémoire en Meuse" },
+      {
+        name: "description",
+        content:
+          "Découvrez la biographie d'un soldat tombé en Meuse pendant la Première Guerre mondiale.",
+      },
+    ],
+  }),
   component: PoiluDetailPage,
   notFoundComponent: NotFound,
 });
@@ -75,14 +70,33 @@ function Monogram() {
 function PoiluDetailPage() {
   const { id } = Route.useParams();
   const navigate = useNavigate();
-  const poilu = getPoiluById(id);
+  const [poilu, setPoilu] = useState<Poilu | null | undefined>(undefined);
+  const [poilus, setPoilus] = useState<Poilu[]>([]);
+
+  useEffect(() => {
+    setPoilu(undefined);
+    fetchPoiluById(id)
+      .then(setPoilu)
+      .catch(() => setPoilu(null));
+    fetchPoilus()
+      .then(setPoilus)
+      .catch(() => setPoilus([]));
+  }, [id]);
+
+  if (poilu === undefined) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-frost">
+        <p className="text-muted">Chargement…</p>
+      </div>
+    );
+  }
 
   if (!poilu) {
     return <NotFound />;
   }
 
   const yearOfDeath = poilu.deces.split("-")[0];
-  const yearOfBirth = poilu.naissance.toString();
+  const yearOfBirth = poilu.naissance?.toString() ?? "—";
 
   // Find other poilus (excluding current one) for "discover more" section
   const otherPoilus = poilus.filter(p => p.id !== poilu.id).slice(0, 3);

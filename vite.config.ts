@@ -6,7 +6,11 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Build Ubuntu : `npm run build:node` (NITRO_PRESET=node-server). Sans variable, le build Lovable reste inchangé.
+const nitroPreset = process.env.NITRO_PRESET;
+
 export default defineConfig({
+  ...(nitroPreset ? { nitro: { preset: nitroPreset } } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

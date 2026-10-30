@@ -7,6 +7,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:node": "cross-env NITRO_PRESET=node-server vite build",
+    "dev:api": "node server/server.js",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
