@@ -1,0 +1,4 @@
+
+psql -U phenix_admin -d phenixmeuse -h localhost
+dl les tables :
+for table in $(psql -U phenix_admin -d phenixmeuse -h localhost -qAt -c "SELECT tablename FROM pg_tables WHERE schemaname = 'public'"); do psql -U phenix_admin -d phenixmeuse -h localhost -c "\copy $table TO '/home/ubuntu/testApi/$table.csv' WITH CSV HEADER"; done

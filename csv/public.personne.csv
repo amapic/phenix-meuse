@@ -1,0 +1,152 @@
+id,nom,prenom,conflit_id,date_naissance,commune_naissance_id,dpt_naissance,classe,bureau_id,regiment_id,section_id,date_deces,lieu_deces_id,cause_id,lieu_inhumation_id,biographie,portrait
+1,ARDOUREL,Fernand André Joseph,1,1869-08-20,1,82,1916,1,1,1,1916-09-18,104,1,149,,
+2,ARTEIL,Auguste,1,1885-04-18,2,36,1905,2,2,,1916-11-23,105,2,150,,
+3,BARRE,François Jean Baptiste,1,1892-07-08,3,36,1912,3,3,,1916-06-27,106,3,150,,
+4,BARRET,Paul Henri,1,1892-06-29,4,88,1912,4,4,2,1962-09-14,4,4,4,,
+5,BEFFAY,Lucien,1,1897-03-27,5,75,1917,2,5,,1926-11-13,107,4,150,,
+6,BERGOGNON,Henri Joseph,1,1876-10-24,6,7,1896,5,6,,1915-04-05,108,3,145,,
+7,BISOT,René Joseph Étienne,1,1883-12-25,7,51,1903,6,7,3,1915-04-09,109,3,151,,
+8,BLARD,Frédéric Maurice,1,1892-03-08,8,76,1912,7,8,4,1914-08-29,110,3,152,,
+9,BLÉRON,Émile,1,1894-08-25,9,36,1914,2,9,,1956-04-02,111,4,111,,
+10,BONFILS,Charles Clément Prosper,1,1889-04-30,10,975,1909,8,10,5,1960-10-19,94,4,94,,
+11,BONNAMY,Jeanne Blanche Marie,1,1877-11-26,11,71,,,,,1917-08-18,112,5,112,,
+12,BONNEVILLE,Charles,1,1863-01-24,12,81,1883,,11,6,1916-05-13,113,1,145,,
+13,BOULIER,Albert François,1,1892-11-29,13,76,1912,7,8,,1914-08-29,110,3,152,,
+14,BREMAUD,Marie Louis Firmin,1,1884-12-09,14,85,1904,9,12,,1916-02-15,114,6,153,,
+15,BROCQ,Dominique,1,1874-11-22,15,65,1894,10,13,7,1916-03-16,115,1,94,,
+17,CADASTRENC,Arnaud,1,1869-01-16,17,10,1889,11,15,8,1915-03-18,113,1,145,,
+18,CASABIANCA,Simon Jean,1,1890-09-22,18,2A,1910,12,6,,1917-04-25,117,3,130,,
+19,CASEVITZ,Henri,1,1869-09-16,19,75,1889,13,16,9,1916-07-08,118,3,94,,
+20,CASTEL,François,1,1896-04-27,20,29,1916,14,17,,1916-07-06,119,3,94,,
+21,CAUX,César,1,1878-07-17,21,62,1898,15,17,10,1916-05-03,115,3,94,,
+22,CHAMPROUX,Léon Hippolyte,1,1895-04-25,22,72,1915,16,18,11,1972-09-29,120,4,,,
+23,CHARRON,Georges,1,1887-12-17,23,36,1907,3,19,12,1916-05-07,105,3,150,,
+24,CHEVAILLOT,Charles Ovide,1,1888-07-30,24,51,1908,17,20,13,1914-08-29,110,2,152,,
+25,CHICHERY,Jules,1,1883-02-27,25,37,1903,3,21,14,1916-05-18,105,3,150,,
+26,COLLIGNON,Silvère,1,1881-11-04,26,54,1901,18,22,15,1914-08-24,121,2,150,,
+27,COQUERELLE,Louis,1,1879-08-07,27,59,1899,19,23,10,1916-08-05,115,3,94,,
+28,DALLERÉ,Maurice Edmond Louis Eugène,1,1889-11-13,28,75,1909,20,24,1,1916-10-07,106,3,94,,
+29,DELUMEAU,Albert Louis,1,1886-08-04,29,36,1906,3,25,16,1915-07-13,122,3,150,,
+30,DELUMEAU,Auguste Désiré,1,1880-01-31,29,36,1900,3,26,,1916-05-03,105,3,141,,
+31,DEMEURE,Claude Jean,1,1891-07-19,24,51,1911,17,27,1,1915-02-26,123,3,154,,
+32,DEVLOO,Lucien Émile René,1,1874-04-15,30,59,1894,21,28,15,1916-09-29,107,1,94,,
+33,DUFOSSÉ,Edmond Albert Louis,1,1893-11-20,31,62,1913,15,29,17,1915-04-08,124,3,150,,
+34,DUPIN,Louis Émile,1,1876-11-19,32,40,1896,22,30,18,1916-10-09,115,3,94,,
+35,DUTOUR,Jules Henri,1,1881-05-25,33,18,1901,23,31,17,1915-07-08,125,1,155,,
+36,FAURE,Julien Alexis,1,1878-06-02,34,43,1898,24,32,19,1916-06-14,119,3,94,,
+37,FLANDIN,Joseph Charles Pierre,1,1888-10-06,35,27,1908,25,33,,1916-07-20,126,3,94,,
+38,FORGET,Albert Louis,1,1889-01-07,36,36,1909,2,34,12,1916-04-30,105,2,150,,
+39,FRECOT,Henry,1,1893-06-01,37,54,1913,26,35,20,1916-07-12,127,7,150,,
+40,FRIRION,Jules Auguste,1,1882-10-12,38,55,1902,27,27,12,1915-03-20,123,3,154,,
+41,GIBET,Arsène Joseph Marie,1,1887-06-18,39,35,1907,28,36,,1916-07-04,106,2,130,,
+42,GROLLEAU,Eugène,1,1976-02-29,40,79,1896,29,2,21,1916-05-06,105,2,150,,
+43,HEUZÉ,Raoul Édouard,1,1897-12-12,41,12,1917,30,37,22,1917-10-12,128,2,156,,
+44,HUMBERT,Arthur Charles Émile,1,1885-06-14,42,55,1905,8,38,23,1916-05-23,117,3,130,,
+45,JEANNETON,Eugène Albert,1,1896-03-22,43,36,1916,3,39,,1981-01-06,129,4,,,
+46,LAMY,Léon Abel,1,1893-09-16,44,36,1913,3,40,21,1916-02-25,117,3,150,,
+47,LASNIER,André Camille Louis,1,1889-06-12,45,91,1909,31,41,11,1916-08-16,119,3,150,,
+48,LAUTOUR,Théodore Victor,1,1872-05-27,46,61,1892,32,42,24,1916-04-25,115,3,94,,
+49,MAZOYER,Claude,1,1880-12-31,47,71,1900,33,43,25,1916-09-21,115,3,106,,
+50,MESURE,Antoine,1,1895-11-24,48,63,1915,34,44,26,1916-10-25,119,3,106,,
+51,MEZURE,Léger,1,1884-11-19,48,63,1904,34,45,,1916-11-09,119,3,106,,
+52,MOLLE,Alphonse Albert,1,1878-09-28,49,70,1898,35,20,13,1914-08-29,110,2,152,,
+53,MULLER,Louis Auguste,1,1894-06-20,50,8,1914,36,46,,1916-09-04,115,8,150,,
+54,PERGAUD,Louis Émile Vincent,1,1882-01-22,51,25,1902,37,29,,1915-04-08,124,2,150,,
+55,PIGOIS,Jean Baptiste,1,1883-05-13,52,18,1903,23,47,12,1916-04-24,123,2,150,,
+56,PINEAU,Isidore,1,1879-04-29,53,79,1899,29,45,,1916-06-05,119,3,150,,
+57,PIOTROWSKA,Eugénie,1,1875-07-28,54,21,,,,,1917-08-18,112,5,112,,
+58,PLOTON,Daniel Benjamin Albert,1,1896-04-24,23,36,1916,3,48,1,1916-05-17,130,3,23,,
+59,PORT,Joseph Lucien,1,1896-03-23,55,54,1916,8,49,10,1917-08-20,117,3,130,,
+60,RAUT,Gaëtan Éléonore,1,1896-03-06,56,60,1916,38,50,27,1954-12-05,131,1,150,,
+61,RICHARD,Louis Hippolyte,1,1886-02-13,57,1,1906,39,51,28,1916-10-26,,1,94,,
+62,RIEUL,Charles Jean,1,1881-10-04,58,58,1901,40,52,28,1916-07-13,94,3,94,,
+63,ROY,Eugène,1,1879-03-07,59,18,1899,40,53,29,1957-08-10,59,4,,,
+64,SABARD,Georges,1,1893-07-07,60,18,1913,41,25,,1915-07-13,122,2,150,,
+65,VOSDEY,Loetitia Berthe Gabrielle,1,1891-04-04,61,51,,,,,1917-08-18,112,5,112,,
+66,WATTEL,Jean Lucien Marie,2,1898-07-25,62,59,1918,,54,30,1940-05-27,132,3,94,,
+67,MONTEIL,Baptiste Alexandre,1,1895-07-30,63,43,1915,24,55,,1964-08-10,63,4,,,
+68,MONTEIL,Louis Baptiste,1,1883-07-22,63,43,1903,24,56,,1953-01-03,63,4,,,
+69,MONTEIL,Pierre Henri,1,1891-05-15,63,43,1911,24,57,15,1916-08-01,119,2,106,,
+70,DELMARRE,Victor Désiré,1,1887-07-19,64,59,1907,19,58,31,1971-03-22,27,4,,,
+71,LALET,Louis Eugène,1,1883-08-07,65,Algérie,1903,42,59,,1934-05-02,133,4,,,
+72,LE BRAS,Julien Marie,1,1882-06-07,66,56,1912,43,60,32,1916-06-20,107,1,157,,
+73,PAPOUIN,Alexis Marie,1,1878-03-05,67,53,1898,44,34,17,1917-05-14,134,3,158,,
+74,CROISSANDEAU,Gaston André,1,1894-10-31,68,93,1914,45,61,33,1996-12-21,135,4,,,
+75,JEAN,Ferdinand,1,1890-03-16,69,23,1910,46,62,17,1961-03-31,136,4,,,
+76,MARATON,Clément Eugène Amédée,1,1896-11-22,70,36,1916,2,63,,,,4,,,
+77,CUDREY,Jean Joseph,1,1884-05-01,71,70,1904,35,64,12,1916-06-27,137,3,94,,
+78,PIAULET,Alexandre,1,1886-09-30,72,36,1906,2,65,,1916-03-08,106,3,,,
+79,PIAULET,Auguste Gabriel,1,1890-05-05,72,36,1910,2,66,,1915-05-02,138,9,159,,
+80,GALLION,Philibert,1,1884-07-03,73,1,1904,47,67,34,1917-02-05,139,3,160,,
+81,REVILLIOD,Jules Louis,1,1897-06-02,74,38,1917,48,68,1,1918-09-12,123,3,,,
+82,LAURENS,Alphonse Albert,1,1881-05-11,75,51,1901,17,69,35,1915-11-28,140,3,151,,
+83,DELAPORTE,Victor Jean Baptiste,1,1885-07-05,76,36,1905,2,70,1,1917-08-02,141,3,,,
+84,AUBINEAU,Auguste Jean Baptiste,1,1887-12-14,77,49,1907,49,71,,1916-03-04,142,1,160,,
+85,COUASNET,Pierre Jules,1,1885-05-29,78,49,1905,50,72,,,,,,,
+86,BOINOT,Laïs,1,1894-07-23,79,79,1914,51,73,36,1917-08-19,143,3,161,,
+87,CREUSOT,Georges Alfred,1,1897-06-09,80,88,1917,37,74,25,1918-06-12,144,3,145,,
+88,CHIPOT,Charles Isidore,1,1880-12-08,81,88,1900,52,75,12,1916-08-06,145,1,145,,
+89,LE BLANC,François Marie,1,1891-04-26,82,22,1911,53,76,22,1916-04-20,107,1,162,,
+90,BRIFOTEAUX,Léon André,1,1887-04-09,83,2,1907,54,10,,1915-06-29,123,3,,,
+91,BENOIST,Gustave Léon,1,1889-10-20,84,28,1909,55,77,37,1915-04-11,123,3,123,,
+92,CHÂTELLIER,Henri Jules,1,1875-04-11,85,79,1895,51,78,38,1916-10-20,145,1,145,,
+93,LECLERC,Édouard Auguste Émile,1,1895-09-14,86,50,1915,56,79,39,1916-06-25,106,3,94,,
+94,YUNCK,Paulin Jean Henri,1,1874-01-16,87,55,1894,8,80,,1914-11-12,107,10,151,,
+95,ROUPIE,Victor Jean Marie,1,1888-07-23,88,35,1908,56,81,38,,,4,,,
+96,VERDUN,Paul Joseph,1,1881-12-16,89,55,1901,8,22,40,,,,,,
+97,DUPUY,Jean,1,1884-12-28,90,33,1904,57,82,25,1916-03-31,145,1,145,,
+98,CHUBERT,Léon,1,1896-02-01,91,86,1916,58,24,,1916-06-23,112,1,112,,
+99,WATTEL,Paul Henri Robert Joseph,1,1880-07-03,92,58,1900,19,83,41,1916-02-23,107,3,,,
+100,BERGE,Alphonse Jean Alexandre,1,1893-02-08,93,41,1913,41,84,42,1916-05-22,146,1,,,
+101,SEIGNEURET,Justin Jules Émile,1,1885-02-27,94,55,1905,8,85,7,1914-11-10,147,2,,,
+102,PORTIER,François Jules Alphonse,1,1879-12-05,95,21,1899,59,86,14,1916-09-06,119,3,,,
+103,GEORGET,Adelin Modeste,1,1886-04-01,96,55,1906,8,20,43,1916-06-11,145,1,145,,
+104,CALVET,Paul Jean Pierre,1,1885-04-04,97,81,1905,60,87,28,1914-09-01,148,2,106,,
+105,GIRAULT,François Julien Louis,1,1883-10-01,98,53,1903,61,88,22,1917-04-17,144,3,145,,
+106,DELTOUR,Édouard Lucien,1,1894-08-14,99,12,1914,62,89,,1916-06-03,112,1,112,,
+107,LAJOUS,Jean,1,1879-12-19,100,31,1899,63,90,44,1914-11-28,108,3,145,,
+108,LECLÈRE,"""Paul"" Émile Célestin",1,1882-06-01,101,2,1902,64,91,10,1915-04-12,145,1,145,,
+109,COMTE,Jean Benoît,1,1881-02-07,102,38,1901,65,92,45,1916-07-31,137,3,106,,
+110,LEHUE,Jean Baptiste Émile,1,1880-02-09,103,59,1900,66,93,,1914-09-24,145,1,145,,
+16,BROUILLARD,Fernand Louis Clément,2,1912-03-03,16,53,1932,,14,1,1940-06-14,116,3,94,"
+BROUILLARD Fernand Louis Clément
+
+Sa fiche [Memoiredeshommes](https://www.memoiredeshommes.sga.defense.gouv.fr:443/ark:40699/m00523c9f6cf34b8.moteur=arko_default_66fa92733b29e) ; sa fiche [SdG](https://www.memoiredeshommes.sga.defense.gouv.fr:443/ark:40699/m0063629464395c4.moteur=arko_default_66faadcbce66f); son [acte de naissance](https://archives.lamayenne.fr/archives-en-ligne/ark:/37963/r118174zpnqxdk/f24?context=ead2::FRAD053_2NUM108_RM_de-467&locale=fr) (registre 4 E 110/113, page 24, acte 69) ; [annonce de sa naissance](https://www.retronews.fr/journal/lavenir-de-la-mayenne/10-mars-1912/3/64e40f8a-9915-424c-81e9-8e453ded6123?utm_source=referrer&utm_medium=embed-externe) (L’Avenir de la Mayenne édition du 10 mars 1912, page 3) ; [conseil de révision](https://gallica.bnf.fr/ark:/12148/bpt6k43080371/f3.item) classe 1932 (L’Avenir de la Mayenne édition du 12 juin 1932, page 3 et [La Mayenne](https://www.retronews.fr/journal/la-mayenne/14-juin-1932/2/551116b3-3a53-4508-9b9b-5831c0ed5641?utm_source=referrer&utm_medium=embed-externe) édition du 14 juin 1932, page 2) ; [son décès](https://archives.seinesaintdenis.fr/ark:/79690/vtab4b5131b09c2ed14/img:AD093EN_NUM_000045_00208) (Tables des successions et absences, registre 1872W/9, page208, ligne 362) ; son nom dans la [liste des morts de la ville du Bourget](https://www.retronews.fr/journal/journal-du-canton-daubervilliers/01-octobre-1954/3/758d1cb1-d0ea-4fc2-b78e-35ca245ecdb4?utm_source=referrer&utm_medium=embed-externe) (Journal du Canton d'Aubervilliers édition du 1er octobre 1954, page 3) ; recensement [Ernée 1921](archives.lamayenne.fr/archives-en-ligne/ark:/37963/r246900p71ck/f36?context=ead4::FRAD053_2NUM204_RM_de-1484&locale=fr) (registre 6 M 190 – 1921, page 36, rue Clouard, maison 11, ménage 11) ; recensement [Ernée 1926](archives.lamayenne.fr/archives-en-ligne/ark:/37963/r24691r0dvik/f36?context=ead4::FRAD053_2NUM204_RM_de-1485&locale=fr) (registre 6 M 190 – 1926, page 36, rue Clouard, maison 6, ménage 6, individu 210) ; acte de [décès première épouse](archives.paris.fr/arkotheque/visionneuse/visionneuse.php?arko=YTo2OntzOjQ6ImRhdGUiO3M6MTA6IjIwMjUtMDgtMTEiO3M6MTA6InR5cGVfZm9uZHMiO3M6MTE6ImFya29fc2VyaWVsIjtzOjQ6InJlZjEiO2k6NDtzOjQ6InJlZjIiO2k6MjYxMzYxO3M6MTY6InZpc2lvbm5ldXNlX2h0bWwiO2I6MTtzOjIxOiJ2aXNpb25uZXVzZV9odG1sX21vZGUiO3M6NDoicHJvZCI7fQ==#uielem_move=-67%2C152&uielem_islocked=0&uielem_zoom=188&uielem_brightness=0&uielem_contrast=0&uielem_isinverted=0&uielem_rotate=F) (registre 10D 457, page 5, acte 3668) ; [inhumation de sa première épouse](https://archives.paris.fr/archives-numerisees/sources-genealogiques-complementaires/cimetieres-et-pompes-funebres/cimetieres/consulter-les-registres-journaliers-dinhumation?arko_default_64c11d444499f--ficheFocus=&arko_default_64c11d444499f--filtreGroupes%5Bmode%5D=simple&arko_default_64c11d444499f--filtreGroupes%5Bop%5D=AND&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabb5212%5D%5Bop%5D=AND&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabb5212%5D%5Bq%5D%5B%5D=Pantin&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabb5212%5D%5Bextras%5D%5Bmode%5D=select&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabc376e%5D%5Bop%5D=AND&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabc376e%5D%5Bq%5D%5B%5D=04%2F10%2F1937&arko_default_64c11d444499f--filtreGroupes%5Bgroupes%5D%5B0%5D%5Barko_default_64c11dabc376e%5D%5Bextras%5D%5Bmode%5D=input&arko_default_64c11d444499f--from=0&arko_default_64c11d444499f--resultSize=25&arko_default_64c11d444499f--contenuIds%5B%5D=10841969&arko_default_64c11d444499f--modeRestit=arko_default_64c11df9e0c32#/_recherche-api/visionneuse-infos/arko_default_64c11d444499f/arko_fiche_64c124c849239/arko_default_64c11e4ac8248/image/94522) (registre PAN\_RJ19371937\_01, page 1, numéro d’ordre 3619) ; acte de [mariage avec sa première épouse](https://archives.seinesaintdenis.fr/ark:/79690/vta952bb381e7db742d/img:AD093EC_NUM_003998_00020) (registre 1 E 029/93, page 20, acte 75) ; [annonce du premier mariage](https://www.retronews.fr/journal/paris-est/01-avril-1933/3/a4c9b1cb-b672-4634-889d-6698d1245a67?utm_source=referrer&utm_medium=embed-externe) (Paris-Est édition du 1er avril 1933, page 3) ; acte de [mariage avec sa seconde épouse](https://archives.seinesaintdenis.fr/ark:/79690/vtae3419f91b625eb41/img:AD093EC_NUM_004614_00008) (registre 1 E 007/65, page 8, acte 31) ; [décès seconde épouse](https://www.deces-en-france.fr/resultats/20665981-congretais-helene-eugenie-josephine) (Décès en France) ; [décès fille Yvette Fernande](https://www.deces-en-france.fr/resultats/19704476-brouillard-yvette-fernande) (Décès en France).
+====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Son père : [fiche matricule](https://archives.lamayenne.fr/archives-en-ligne/ark:/37963/r90189cwinwk/f1?context=militaire::530135469&locale=fr) (classe 1897, registre R 1492, matricule 921) ; [décès](https://archives.lamayenne.fr/archives-en-ligne/ark:/37963/r692210zzqxg0k/f8?context=ead::FRAD053_2NUM099_RM_de-136&locale=fr) (Tables des successions et absences, registre 116Q2/16, page 8, ligne 30).
+
+Son frère Almire : son [acte de naissance](archives.lamayenne.fr/archives-en-ligne/ark:/37963/r118171zh8r3rk/f27?context=ead2::FRAD053_2NUM108_RM_de-464&locale=fr) (registre 4 E 110/110, page 27, acte 77) ; [prisonnier de guerre](https://gallica.bnf.fr/ark:/12148/bpt6k5626986g/f16.item.zoom) (Liste officielle n° 25 de prisonniers Français du 3 octobre 1940, page 14).
+
+Fernand Louis Clément BROUILLARD voit le jour le 3 mars 1912, rue Clouard à Ernée (Mayenne), au domicile de ses parents : Joseph Valentin Désiré BROUILLARD, mécanicien, et Émilie Eugénie CROTTÉ, couturière.
+
+Au début du mois d’août 1914, son père est mobilisé au 3e Régiment d’artillerie à pied, à la suite de la déclaration de guerre. Âgé de 37 ans, il alterne alors les séjours au dépôt et au front jusqu’au 16 octobre 1915, date à laquelle il est détaché aux établissements Massenet, à Paris, en qualité d’ajusteur-mécanicien.
+
+Suivant les traces de son père, Fernand BROUILLARD devient à son tour mécanicien et travaille pour le même employeur à Ernée en 1926.
+
+Le 25 mars 1933, il épouse Yvonne Marcelle ANGIN à Drancy (Seine-Saint-Denis). De leur union naît une fille, Yvette Fernande, le 18 septembre 1933 à Paris (10e arrondissement).
+
+Tragiquement, son épouse décède le 30 septembre 1937, à l’âge de 24 ans, des suites d’une fausse couche. Elle est inhumée au cimetière de Pantin.
+
+Devenu vendeur en parfumerie, Fernand se remarie le 25 mars 1939 au Blanc-Mesnil (Seine-Saint-Denis) avec Hélène Eugénie Joséphine CONGRETAIS.
+
+Au déclenchement de la seconde guerre mondiale, il est rappelé sous les drapeaux et affecté à la 11e Compagnie du 6e Bataillon du 1er Régiment d’Infanterie Coloniale, unité intégrée à la 3e Division d’Infanterie Coloniale (3e D.I.C.).
+
+Le 10 mai 1940, l’Allemagne lance son offensive-éclair contre le Luxembourg, la Belgique et les Pays-Bas, jusque-là neutres, avant d’envahir la France. Malgré une résistance courageuse, l’armée française, mal équipée face à une force ennemie moderne et soutenue par une aviation redoutable, subit de lourdes pertes.  
+Le 10 juin, le gouvernement français quitte Paris pour Tours, et le 12 juin, l’ordre de repli général est donné.
+
+La 3e D.I.C. s’installe alors sur la rive gauche de la Meuse, entre la côte 304 et le Mort-Homme, pour défendre Verdun (Meuse). Les combats sont d’une intensité extrême, marqués par de lourdes pertes causées par l’artillerie allemande.
+
+Le 14 juin 1940, face à un ennemi trois fois supérieur en nombre, les régiments de la 3e D.I.C. tentent de stopper l’avance allemande et mènent plusieurs contre-attaques, appuyées par des chars Renault R35. Mais la Wehrmacht, puissamment armée, finit par submerger les lignes françaises.  
+À l’aube du 15 juin, la situation est désespérée : le 23e R.I.C. ne compte plus que 600 hommes, et les 5e, 9e et 11e Compagnies du 1er R.I.C. ont pratiquement disparu.
+
+C’est au cours de ces combats, le 14 juin 1940, que Fernand Louis Clément BROUILLARD est tué à l’ennemi au Mort-Homme, sur le territoire de Cumières-le-Mort-Homme (Meuse). Il est déclaré « mort pour la France ».
+
+D’abord inhumé dans le cimetière communal de Cumières, Fernand BROUILLARD est exhumé le 5 juillet 1954 et réinhumé dans la nécropole nationale de Belleray (Meuse).
+
+Son nom est gravé en lettres d’or sur le monument aux morts d’Ernée, sa commune natale, ainsi que sur celui du Bourget (Seine-Saint-Denis), où résidait sa veuve.
+
+Son frère Almire (ou Almyre) Isidore Marie Joseph BROUILLARD (1909-1984) figure quant à lui sur une liste de prisonniers de guerre français publiée en octobre 1940.
+
+Sa fille Yvette Fernande, adoptée par la Nation en 1943 et reconnue pupille de la Nation, est décédée le 23 mars 2011, des suites d’un empoisonnement médicamenteux (Médiator).
+",

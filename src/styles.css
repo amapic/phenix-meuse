@@ -1,0 +1,122 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — "Brume de verre"
+ * Warm parchment light, poppy-red primary, frosted glass panels.
+ * Cormorant Garamond display / Inter body / JetBrains Mono labels.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-panel: var(--panel);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-glass: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.977 0.012 85);
+  --foreground: oklch(0.21 0.022 253);
+  --card: oklch(0.985 0.008 85);
+  --card-foreground: oklch(0.21 0.022 253);
+  --popover: oklch(0.985 0.008 85);
+  --popover-foreground: oklch(0.21 0.022 253);
+  --primary: oklch(0.52 0.16 30);
+  --primary-foreground: oklch(0.977 0.012 85);
+  --secondary: oklch(0.945 0.014 80);
+  --secondary-foreground: oklch(0.21 0.022 253);
+  --muted: oklch(0.53 0.02 253);
+  --muted-foreground: oklch(0.53 0.02 253);
+  --accent: oklch(0.945 0.014 80);
+  --accent-foreground: oklch(0.21 0.022 253);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.21 0.022 253 / 0.1);
+  --input: oklch(0.21 0.022 253 / 0.14);
+  --ring: oklch(0.52 0.16 30 / 0.4);
+  --panel: oklch(0.99 0.004 85 / 0.55);
+}
+
+/* Frosted glass language — the project's signature surface treatment */
+.glass {
+  background: var(--panel);
+  backdrop-filter: blur(18px) saturate(1.1);
+  border: 1px solid oklch(0.99 0.004 85 / 0.7);
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.8),
+    0 24px 48px -24px oklch(0.21 0.022 253 / 0.18);
+}
+
+.glass-soft {
+  background: oklch(0.99 0.004 85 / 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(0.99 0.004 85 / 0.6);
+}
+
+.bg-frost {
+  background:
+    radial-gradient(60% 55% at 18% 12%, oklch(0.52 0.16 30 / 0.1), transparent 60%),
+    radial-gradient(50% 50% at 85% 20%, oklch(0.72 0.05 240 / 0.18), transparent 60%),
+    radial-gradient(70% 60% at 50% 100%, oklch(0.94 0.02 85 / 0.6), transparent 70%),
+    var(--background);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.9s var(--ease-glass) both;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+}
