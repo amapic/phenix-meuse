@@ -9,7 +9,7 @@ import {
   type Poilu,
   type PoiluSearchFilters,
 } from "../../lib/poilus";
-// #coucou
+
 export const Route = createFileRoute("/poilus/")({
   head: () => ({
     meta: [
